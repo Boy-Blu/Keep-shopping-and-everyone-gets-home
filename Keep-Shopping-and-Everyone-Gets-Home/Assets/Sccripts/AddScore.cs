@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AddScore : MonoBehaviour
 {
+    //public AudioSource audio; 
     public int score = 0; 
 
     private void OnCollisionEnter(Collision collision)
@@ -19,6 +20,8 @@ public class AddScore : MonoBehaviour
             {
                 score += 200; 
             }
+            AudioSource audio = GetComponent<AudioSource>();
+            audio.Play(); 
             Debug.Log("Score increased!");
             Debug.Log(score);
         }
