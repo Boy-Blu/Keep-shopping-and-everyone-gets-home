@@ -8,10 +8,17 @@ public class AddScore : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Fruit")
+        if (collision.gameObject.tag == "Fruit" || collision.gameObject.tag == "SFruit")
         {
             collision.gameObject.SetActive(false);
-            score += 100; 
+            if (collision.gameObject.tag == "Fruit")
+            {
+                score += 100;
+            }
+            else
+            {
+                score += 200; 
+            }
             Debug.Log("Score increased!");
             Debug.Log(score);
         }

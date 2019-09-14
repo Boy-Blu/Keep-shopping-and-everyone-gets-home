@@ -60,7 +60,7 @@ public class GrabAndMove : MonoBehaviour
 
         //Debug.Log(grabbedObject.tag); 
 
-        if (grabbedObject != null && grabbedObject.tag == "Fruit")
+        if (grabbedObject != null && grabbedObject.tag == "Fruit" || grabbedObject != null && grabbedObject.tag == "SFruit")
         {
             //Debug.Log("Fruit clicked!");
             Vector3 newPosition = gameObject.transform.position + Camera.main.transform.forward * grabbedObjectSize;
